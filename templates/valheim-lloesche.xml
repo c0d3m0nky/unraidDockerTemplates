@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+    <Container version="2">
+    <Name>valheim-lloesche</Name>
+    <Repository>lloesche/valheim-server:latest</Repository>
+    <Registry>https://hub.docker.com/r/lloesche/valheim-server</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <!-- <Support></Support> -->
+    <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
+    <Overview>Valheim server setup based on lloesche's image</Overview>
+    <!-- <WebUI></WebUI> -->
+    <TemplateURL></TemplateURL>
+    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+</Container>
