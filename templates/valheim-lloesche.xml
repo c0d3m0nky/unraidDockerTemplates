@@ -16,8 +16,8 @@
     <PostArgs/>
     <Config Name="UDP 2456" Target="2456" Default="2456" Description="UDP port 2456" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="UDP 2457" Target="2457" Default="2457" Description="UDP port 2457" Type="Port" Display="always" Required="true" Mask="false"/>
-    <Config Name="Config" Target="/config" Default="/mnt/user/appdata/valheim-lloesche/config" Mode="rw" Description="Path to Valheim config folder" Type="Path" Display="always" Required="true" Mask="false"/>
-    <Config Name="Server" Target="/opt/valheim" Default="/mnt/user/appdata/valheim-lloesche/server" Mode="rw" Description="Path to Valheim server folder" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Config" Target="/config" Default="/mnt/user/appdata/valheim-lloesche/config/" Mode="rw" Description="Path to Valheim config folder" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Server" Target="/opt/valheim" Default="/mnt/user/appdata/valheim-lloesche/server/" Mode="rw" Description="Path to Valheim server folder" Type="Path" Display="always" Required="true" Mask="false"/>
     <Config Name="Server Name" Target="SERVER_NAME" Default="" Description="Public name of the game server" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="Server Password" Target="SERVER_PASS" Default="" Description="Password for the game server" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="Server Public" Target="SERVER_PUBLIC" Default="false" Description="Whether the game server is public (true | false)" Type="Variable" Display="always" Required="true" Mask="false"/>
