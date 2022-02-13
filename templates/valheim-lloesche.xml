@@ -4,15 +4,33 @@
     <Repository>lloesche/valheim-server:latest</Repository>
     <Registry>https://hub.docker.com/r/lloesche/valheim-server</Registry>
     <Network>bridge</Network>
+    <Network Default="bridge">bridge</Network>
     <Privileged>false</Privileged>
     <!-- <Support></Support> -->
     <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
     <Overview>Valheim server setup based on lloesche's image</Overview>
     <!-- <WebUI></WebUI> -->
-    <TemplateURL></TemplateURL>
-    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+    <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/valheim-lloesche.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/6019f843a499ef13fe328dbe299fecce09d0f52d/images/valheim.png</Icon>
     <ExtraParams/>
     <PostArgs/>
-    <DonateText/>
-    <DonateLink/>
+    <Config Name="UDP 2456" Target="2456" Default="2456" Description="UDP port 2456" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="UDP 2457" Target="2457" Default="2457" Description="UDP port 2457" Type="Port" Display="always" Required="true" Mask="false"/>
+    <Config Name="Config" Target="/config" Default="/mnt/user/appdata/valheim-lloesche/config" Mode="rw" Description="Path to Valheim config folder" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Server" Target="/opt/valheim" Default="/mnt/user/appdata/valheim-lloesche/server" Mode="rw" Description="Path to Valheim server folder" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Server Name" Target="SERVER_NAME" Default="" Description="Public name of the game server" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Server Password" Target="SERVER_PASS" Default="" Description="Password for the game server" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Server Public" Target="SERVER_PUBLIC" Default="false" Description="Whether the game server is public (true | false)" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="World Name" Target="WORLD_NAME" Default="" Description="Name of the Valheim world to load or generate" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="UMASK" Target="PERMISSIONS_UMASK" Default="0000" Description="Umask to use for backups, config files and directories" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="PGID" Target="PGID" Default="100" Description="GID to run valheim-server as" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="Admin Ids" Target="ADMINLIST_IDS" Default="" Description="Space separated list of admin SteamIDs" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Update Cron" Target="UPDATE_CRON" Default="" Description="Cron schedule for update checks (disabled if set to an empty string or if the legacy UPDATE_INTERVAL is set)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Restart Cron" Target="RESTART_CRON" Default="" Description="Cron schedule for server restarts (disabled if set to an empty string)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Backups" Target="BACKUPS" Default="true" Description="Whether the server should create periodic backups (true | false)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Backup Cron" Target="BACKUPS_CRON" Default="30 * * * *" Description="Cron schedule for world backups (disabled if set to an empty string or if the legacy BACKUPS_INTERVAL is set)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Backups if Idle" Target="BACKUPS_IF_IDLE" Default="false" Description="Backup even when no players have been connected for a while" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Enable Valheim Plus" Target="VALHEIM_PLUS" Default="false" Description="Whether ValheimPlus mod should be loaded (config in /config/valheimplus, additional plugins in /config/valheimplus/plugins). Can not be used together with BEPINEX." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+    <Config Name="Enable BepinEx" Target="BEPINEX" Default="false" Description="Whether BepInExPack Valheim mod should be loaded (config in /config/bepinex, plugins in /config/bepinex/plugins). Can not be used together with VALHEIM_PLUS" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+
 </Container>
