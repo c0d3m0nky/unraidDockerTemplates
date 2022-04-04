@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+    <Container version="2">
+    <Name>MsSql-FTS</Name>
+    <Repository>c0d3m0nk3y/mssql/server-fts:2019-latest</Repository>
+    <!-- <Registry>https://hub.docker.com/r/lloesche/valheim-server</Registry> -->
+    <Network>bridge</Network>
+    <Network Default="bridge">bridge</Network>
+    <Privileged>false</Privileged>
+    <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
+    <Overview>MsSql with Full Text Search enabled</Overview>
+    <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/MsSql-FTS.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/f6d6fb93af6b2c5675b7a8f3daa38e89ba8b5dd9/images/sql-server.png</Icon>          
+    <ExtraParams>--ulimit stack=8192000:8192000</ExtraParams>
+    <PostArgs/>
+    <Config Name="TCP 1433" Description="TCP port 2456" Type="Port" Target="1433" Default="1433" Mode="tcp" Display="always" Required="true" Mask="false"/>
+    
+    <Config Name="Share Volatile" Description="Path to Share Volatile" Type="Path" Target="/share_volatile" Default="/mnt/disks/databases-mssql/sandbox/share_volatile" Mode="rw" Display="always" Required="true" Mask="false"/>
+    <Config Name="Data" Description="Path to data" Type="Path" Target="/var/opt/mssql/data" Default="/mnt/disks/databases-mssql/sandbox/data" Mode="rw" Display="always" Required="true" Mask="false"/>
+    <Config Name="Log" Description="Path to logs" Type="Path" Target="/var/opt/mssql/log" Default="/mnt/disks/databases-mssql/sandbox/log" Mode="rw" Display="always" Required="true" Mask="false"/>
+    <Config Name="Secrets" Description="Path to secrets" Type="Path" Target="/secrets" Default="/mnt/disks/databases-mssql/sandbox/secrets" Mode="rw" Display="always" Required="true" Mask="false"/>
+    <Config Name="Backups" Description="Path to backups" Type="Path" Target="/var/_backups" Default="/mnt/user/databases/mssql/sandbox/backups" Mode="rw" Display="always" Required="true" Mask="false"/>
+
+    <Config Name="SA Password" Description="SA password" Type="Variable" Target="SA_PASSWORD" Default="" Display="always" Required="true" Mask="true"/>
+    <Config Name="Accept EULA" Description="Accept EULA" Type="Variable" Target="ACCEPT_EULA" Default="Y" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="MsSql PID" Description="MsSql product id" Type="Variable" Target="MSSQL_PID" Default="Developer" Display="advanced" Required="true" Mask="false"/>
+    <Config Name="MsSql Agent" Description="Enable MsSql Agent" Type="Variable" Target="MSSQL_AGENT_ENABLED" Default="True" Display="advanced" Required="true" Mask="false"/>
+
+</Container>
