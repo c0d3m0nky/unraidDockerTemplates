@@ -12,7 +12,7 @@
     <Icon>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/f6d6fb93af6b2c5675b7a8f3daa38e89ba8b5dd9/images/sql-server.png</Icon>          
     <ExtraParams>--ulimit stack=8192000:8192000</ExtraParams>
     <PostArgs/>
-    <Config Name="TCP 1433" Description="TCP port 2456" Type="Port" Target="1433" Default="1433" Mode="tcp" Display="always" Required="true" Mask="false"/>
+    <Config Name="TCP 1433" Description="TCP port 1433" Type="Port" Target="1433" Default="1433" Mode="tcp" Display="always" Required="true" Mask="false"/>
     
     <Config Name="Share Volatile" Description="Path to Share Volatile" Type="Path" Target="/share_volatile" Default="/mnt/disks/databases-mssql/sandbox/share_volatile" Mode="rw" Display="always" Required="true" Mask="false"/>
     <Config Name="Data" Description="Path to data" Type="Path" Target="/var/opt/mssql/data" Default="/mnt/disks/databases-mssql/sandbox/data" Mode="rw" Display="always" Required="true" Mask="false"/>
