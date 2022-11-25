@@ -11,9 +11,10 @@
     <Overview>Python dynamic API</Overview>
     <!-- <WebUI></WebUI> -->
     <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/taskerpy.xml</TemplateURL>
-    <Icon>https://github.com/c0d3m0nky/unraidDockerTemplates/blob/a82389099fc7499e546e190e728e1cb4add49c58/images/taskerpy.png</Icon>
+    <Icon>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/a82389099fc7499e546e190e728e1cb4add49c58/images/taskerpy.png</Icon>
     <ExtraParams/>
     <PostArgs/>
+    <Config Name="Code" Target="/code" Default="" Mode="rw" Description="Path to source code" Type="Path" Display="always" Required="false" Mask="false"/>
     <Config Name="HTTP" Target="80" Description="TCP port 80" Type="Port" Mode="tcp" Display="always" Required="true" Mask="false"/>
     <Config Name="Postgres Host" Target="PGHOST" Default="" Description="Postgres hostname/ip" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="Postgres Port" Target="PGPORT" Default="5432" Description="Postgres port" Type="Variable" Display="always" Required="true" Mask="false"/>
