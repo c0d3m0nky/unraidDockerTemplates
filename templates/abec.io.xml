@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+    <Container version="1">
+    <Name>abec.io</Name>
+    <Repository>c0d3m0nk3y/abec.io</Repository>
+    <Network Default="bridge">bridge</Network>
+    <Privileged>false</Privileged>
+    <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
+    <Overview>Personal Website</Overview>
+    <WebUI>https://abec.io</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/abec.io.xml</TemplateURL>
+    <Icon>https://github.com/c0d3m0nky/unraidDockerTemplates/blob/2fe5a4bfd46ff5b174b30a44142a04a74460cbe8/images/django_icon.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <Config Name="SqlLite" Target="/db" Default="" Mode="rw" Description="Path to sqllite db" Type="Path" Display="always" Required="false" Mask="false"/>
+    <Config Name="HTTP" Target="80" Description="TCP port 80" Type="Port" Mode="tcp" Display="always" Required="true" Mask="false"/>
+    <Config Name="DB_DIR" Target="DB_DIR" Default="/db" Description="DB_DIR env var" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+</Container>
