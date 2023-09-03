@@ -1,23 +1,26 @@
 <?xml version="1.0"?>
     <Container version="1">
     <Name>rundeck</Name>
-    <Repository>rundeck/rundeck</Repository>
+    <Repository>rundeck/rundeck:4.15.0</Repository>
     <Registry>https://hub.docker.com/r/rundeck/rundeck/</Registry>
-    <Network>bridge</Network>
-    <Network Default="bridge">bridge</Network>
+    <Network>host</Network>
     <Privileged>false</Privileged>
     <!-- <Support></Support> -->
     <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
     <Overview>Multi-language Script Scheduler</Overview>
-    <WebUI>http://[IP]:[PORT:39292]</WebUI>
+    <WebUI>http://[IP]:[PORT:4440]</WebUI>
     <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/rundeck.xml</TemplateURL>
-    <Icon>data:image/png;base64,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</Icon>
+    <Icon>https://cdn.abec.io/unraid/rundeck.png</Icon>
     <ExtraParams/>
     <PostArgs/>
-    <Config Name="AppData" Target="/home/rundeck" Default="[appdata]/rundeck" Mode="rw" Description="" Type="Path" Display="advanced-hide" Required="true" Mask="false" />
-    <Config Name="HTTP" Target="80" Description="TCP port 80" Type="Port" Mode="tcp" Default="39292" Display="always" Required="true" Mask="false"/>
+    <Config Name="AppData" Target="/home/rundeck/server/data" Default="/mnt/user/appdata/rundeck/data" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="Realm File" Target="/home/rundeck/server/config/realm.properties" Default="/mnt/user/appdata/rundeck/realm.properties" Mode="rw" Description="Make file first" Type="Path" Display="always" Required="true" Mask="false" />
+    <Config Name="HTTP" Target="4440" Description="TCP port 4440" Type="Port" Mode="tcp" Default="4440" Display="always" Required="true" Mask="false"/>
     <Config Name="Log Strategy" Target="RUNDECK_LOGGING_STRATEGY" Default="CONSOLE" Description="Logging strategy. Set to FILE to log to /home/rundeck/server/logs" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+    <Config Name="Log Path" Target="/home/rundeck/server/logs" Default="" Mode="rw" Description="Log folder for when Log Strategy set to FILE" Type="Path" Display="advanced-hide" Required="false" Mask="false" />
     <Config Name="Max Thread Count" Target="RUNDECK_QUARTZ_THREADPOOL_THREADCOUNT" Default="10" Description="Max number of threads you want to run concurrently" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
     <Config Name="JVM Max RAM %" Target="JVM_MAX_RAM_PERCENTAGE" Default="75" Description="Limit Java heap size to % of container RAM" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
     <Config Name="Audit Logging" Target="RUNDECK_LOGGING_AUDIT_ENABLED" Default="" Description="Set to anything enables audit logging. This can be very verbose so use with caution" Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+    <Config Name="Rundeck Server Address" Target="RUNDECK_SERVER_ADDRESS" Default="0.0.0.0" Description="This is the address or hostname the application will attempt to bind to within the container" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+    <Config Name="Rundeck Grails URL" Target="RUNDECK_GRAILS_URL" Default="/." Description="Controls the base URL the app will use for links, redirects, etc. This is the URL users will use to access the site" Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
 </Container>
