@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+    <Container version="1">
+    <Name>imagemagick</Name>
+    <Repository>c0d3m0nk3y/imagemagick</Repository>
+    <Network Default="bridge">bridge</Network>
+    <Privileged>false</Privileged>
+    <Project>https://github.com/c0d3m0nky/unraidDockerTemplates</Project>
+    <Overview>Imagemagick</Overview>
+    <TemplateURL>https://raw.githubusercontent.com/c0d3m0nky/unraidDockerTemplates/main/templates/imagemagick.xml</TemplateURL>
+    <Icon>https://imagemagick.org/image/wand.ico</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <Config Name="Shares" Target="/mnt/unraid" Default="/mnt/user" Mode="rw" Description="Path to shares" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Home" Target="/home/c0d3m0nk3y" Default="" Mode="rw" Description="Path to home" Type="Path" Display="always" Required="true" Mask="false"/>
+    <Config Name="Scripts" Target="/scripts" Default="" Mode="rw" Description="Path to scripts" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
